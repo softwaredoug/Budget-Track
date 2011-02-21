@@ -1,0 +1,36 @@
+<h2>Delete Transaction</h2>
+
+{TRANSACTION_FOUND:}
+{SUBMIT_FOR_DELETION:}
+ <p class = "notice" >Do you really want to <b>PERMANENTLY DELETE</b> this transaction and its associated schedule(s)?</p>
+{:SUBMIT_FOR_DELETION}
+{ROW_DELETED:}
+ <p class = "notice" >The transaction below has been succesfully deleted. Click <a href="index.php?page=transaction&budgetId={MAGIC-BUDGET_UID}">here</a> to return to the transaction overview page</p>
+{:ROW_DELETED}
+ <table align="center" class = "borders">
+ <th>Name</th>
+ <th>Dollar Amount</th>
+ <th>Schedule</th>
+ <th>Really Delete?</th>
+
+<tr>
+ {TRANSACTION_COLS}
+ <td>
+ {ROW_DELETED:}
+ <b>Succesfully Deleted</b>
+ {:ROW_DELETED}
+ {SUBMIT_FOR_DELETION:}
+ <form action="index.php?page=delete_transaction&budgetId={MAGIC-BUDGET_UID}&uid={UID}" method="POST">
+ <input type="Submit" name = "SubmitForDeletion" value ="Yes... really delete">
+ </form>
+ {:SUBMIT_FOR_DELETION}
+ </td>
+</tr> 
+
+</table>
+{:TRANSACTION_FOUND}
+
+{ROW_NOT_FOUND:}
+<p class = "notice">No object is found to perform an operation on...</p>
+{:ROW_NOT_FOUND}
+

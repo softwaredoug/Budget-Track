@@ -1,0 +1,37 @@
+
+<h2>Budget Outlook</h2>
+
+{USER_INPUT_INVALID:}
+{USER_INPUT_INVALID_NOTICE}
+{:USER_INPUT_INVALID}
+
+<div id = "outlook_params">
+{OUTLOOK_REINIT_FORM}
+</div>
+
+<table id = "content-table">
+<th>
+Date</th>
+<th>Name</th>
+<th>Amount</th>
+<th>Balance</th>
+
+<tbody id = "outlookbody">
+
+{SCHEDULED_TRANSACTION_ROW:}
+<tr id="tranInstance_{TRANSACTION_INSTANCE_ID}" onclick="recalcWithout({TRANSACTION_INSTANCE_ID})">
+{SCHEDULED_TRANSACTION_ROW_TEXT}
+</tr>
+{:SCHEDULED_TRANSACTION_ROW}
+
+</tbody>
+</table>
+<script type="text/javascript" src="script/outlook.js"></script>
+<script type="text/javascript">
+
+
+initializeOutlook({MAGIC-BUDGET_UID}, "{START_DATE}", {NUM_DAYS}, {START_BALANCE}, 'outlookbody');
+
+
+
+</script>

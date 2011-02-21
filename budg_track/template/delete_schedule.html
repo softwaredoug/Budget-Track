@@ -1,0 +1,23 @@
+<h2>Delete Schedule From <i>{TRANSACTION_NAME}</i></h2>
+
+{SUCCESS:}
+ <p class = "notice" >The schedule has been succesfully deleted. <a href="index.php?&budgetId={MAGIC-BUDGET_UID}page=schedule&uid={TRANSACTION_UID}">Click to return to {TRANSACTION_NAME}'s schedule page.</a></p>
+{:SUCCESS}
+
+{SCHEDULE_FOUND:}
+{SUBMIT_FOR_DELETION:}
+ <p class = "notice" >Do you really want <b>{TRANSACTION_NAME}</b> to stop occuring: {SCHEDULE_VIEW}?</p>
+{:SUBMIT_FOR_DELETION}
+ 
+ {SUBMIT_FOR_DELETION:}
+ <form action="index.php?page=delete_schedule&budgetId={MAGIC-BUDGET_UID}&type={SCHEDULE_TYPE}&uid={UID}" method="POST">
+ <input type="Submit" name = "submit_for_deletion" value ="Yes... I no longer want this transaction to occur then">
+ </form>
+ {:SUBMIT_FOR_DELETION}
+
+{:SCHEDULE_FOUND}
+
+{SCHEDULE_NOT_FOUND:}
+<p class = "notice">No object is found to perform an operation on...</p>
+{:SCHEDULE_NOT_FOUND}
+

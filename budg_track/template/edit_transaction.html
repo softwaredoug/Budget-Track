@@ -1,0 +1,30 @@
+<h2>Edit Transaction</h2>
+{SUCCESS:}
+<p class = "notice">You have succesfully updated the data below. Click <a href="index.php?page=transaction&budgetId={MAGIC-BUDGET_UID}">here</a> to return to the transaction overview page</p>
+
+{:SUCCESS}
+<table class = "borders" align="center">
+<th>Name</th>
+<th>Description</th>
+<th>Dollar Amount</th>
+{USER_INPUT_INVALID:}
+<tr>
+<td colspan = 3>
+{USER_INPUT_INVALID_NOTICE}
+</td>
+</tr>
+{:USER_INPUT_INVALID}
+
+{FORM_ROW}
+<tr>
+<td colspan = 4>
+You can also
+<a href="index.php?page=schedule&budgetId={MAGIC-BUDGET_UID}&uid={UID}">reschedule</a>
+or 
+<a href="index.php?page=delete_transaction&budgetId={MAGIC-BUDGET_UID}&uid={UID}">delete</a>
+this transaction.
+
+</td>
+</tr>
+</table>
+

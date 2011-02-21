@@ -1,0 +1,39 @@
+<h2>Transaction Overview</h2>
+
+{SCHEDULE_PROMPT:}
+<p class = "notice">
+You have succesfully added the transaction: <b>{TRANSACTION_NAME}</b>. This transaction still needs to be scheduled. <a href = "index.php?page=schedule&budgetId={MAGIC-BUDGET_UID}&uid={TRANSACTION_UID}">Click to schedule {TRANSACTION_NAME}.</a></p>
+{:SCHEDULE_PROMPT}
+
+<table id = "content-table">
+<th>
+Name</th>
+<th>Dollar Amount</th>
+<th>Scheduled To Occur:</th>
+
+{TRANSACTION_ROW:}
+<tr>
+{TRANSACTION_TEXT}
+</tr>
+{:TRANSACTION_ROW}
+</table>
+
+<br>
+<h2>Add Transaction</h2>
+
+{USER_INPUT_INVALID:}
+{USER_INPUT_INVALID_NOTICE}
+{:USER_INPUT_INVALID}
+
+<table  class = "borders">
+<th>Name</th>
+<th>Dollar Amount</th>
+<tr>
+{FORM_ROW}
+</tr>
+</table>
+
+
+
+
+

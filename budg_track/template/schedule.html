@@ -1,0 +1,13 @@
+<h2>Schedule Transaction <i>{TRANSACTION_NAME}</i></h2>
+
+<p>On this page you can either <i>edit</i> or <i>delete</i> a preexisting scheduled time for <b>{TRANSACTION_NAME}</b> to occur or <i>add a new time</i> for <b>{TRANSACTION_NAME}</b></p>
+
+{SCHEDULES_EXIST:}
+
+Right now <b>{TRANSACTION_NAME}</b> occurs:
+{SCHEDULE_CONTROL_VIEW}
+{:SCHEDULES_EXIST}
+
+or add a new time for <b>{TRANSACTION_NAME}</b> to occur: {ADD_SCHEDULE_VIEW}
+
+Once you're done editing the schedule, <a href = "index.php?page=transaction&budgetId={MAGIC-BUDGET_UID}">Click to Get Back To The Transaction Overview Page</a>

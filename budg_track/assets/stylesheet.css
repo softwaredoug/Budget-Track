@@ -1,0 +1,283 @@
+body, html {
+    margin:0; padding:0;
+}
+* {
+    font-family:Verdana, Helvetica, Sans-Serif;
+}
+th, td, p, dd, dl, li, body, form, input, textarea, option,
+label, legend, select {
+    font-family:Verdana, Helvetica, Sans-Serif;
+    font-size:small;
+    color:#660000;
+}
+
+tt, code, pre {
+    font-family:Courier New, Monospace;
+}
+tt {
+    color:maroon;
+}
+
+th {
+    background:silver; 
+    border:1px solid gray;
+}
+img {
+    border:0; 
+    padding:0; 
+    margin:0;
+}
+dt, legend {
+    font-weight:bold;
+}
+form {
+    border:0; 
+    padding:0px; 
+    margin:0px;
+}
+
+@media print {
+    a:link, a:hover, a:visited {
+        color:black; 
+        text-decoration:none;
+    }
+}
+
+h1, h2, h3 {
+    text-align:center;
+    font-weight:bold;
+}
+h1 {
+    font-size:1.65em; 
+}
+h2 {
+    font-size:1.5em; 
+}
+h3 {
+    font-size:1.25em; 
+}
+
+h4
+{
+   margin-right:0.1em;
+   margin-left:0.1em;
+   margin-bottom:0.1em;
+   margin-top:1.0em;
+   font-size:1.0em;
+}
+
+ol, ul 
+{
+    margin-left:10;
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-right:0em;
+}
+
+
+table {
+    empty-cells:show;
+}
+
+.borders td, .borders th {
+    border:1px solid gray; 
+    padding:3px;
+}
+.borders {
+    border-collapse:collapse; 
+    border-spacing:0px; 
+    border:1px solid gray;
+}
+.top td {
+    vertical-align: top;
+}
+
+.error {
+    border:1px solid red; 
+    padding:3px 3px 3px 20px; 
+    background:#dddddd url(error.png) no-repeat;
+}
+.notice {
+    background:#ffffcc url(note.png) no-repeat; 
+    border:3px double #999966; 
+    padding:3px 3px 3px 20px;
+}
+.notice2 {
+     background: url(note.png) no-repeat; 
+     color:#ff0000;
+     border:3px double #999966; 
+     padding:3px 3px 3px 20px;
+}
+.notice3 {
+     border:3px double #999966; 
+     padding:3px 3px 3px 20px;
+}
+.noticeTopMargin {
+    background:#ffffcc url(note.png) no-repeat; 
+    border:3px double #999966; 
+    padding:3px 3px 3px 20px;
+    margin-top:10px;
+}
+.parameter {
+    border:1px solid black; 
+    margin:1px; 
+    padding:1px; 
+    width:60px;
+}
+.parameter:focus {
+    background:#EEEEFF;
+}
+.active {
+    background:url(nw.gif) no-repeat gray;
+    color:white; 
+    border-right:1px solid white; 
+    text-decoration:none;
+    border-bottom:1px solid gray;
+    font-weight:bold;
+}
+.active a:link, .active a:visited {
+    color:white; 
+    text-decoration:none;
+}
+.inactive {
+    background:url(nw.gif) no-repeat #d9d9d9;
+    color:black; 
+    border-right:1px solid white; 
+    text-decoration:none;
+    border-bottom:1px solid white; 
+}
+.inactive a:link, .inactive a:visited {
+    color:black; 
+    text-decoration:none;
+}
+
+.box-label {
+    color:white; 
+    background:url(nw.gif) no-repeat gray; 
+    font-size:90%;
+} 
+.box {
+    border:1px solid gray;
+    padding: .5em;
+}
+
+.copyright {
+    font-size:75%;
+}
+
+.disabled {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.compact tr th, .compact tr td {
+    font-size:80%;
+}
+
+#tabHeader
+{
+    background-color: white;
+}
+
+/*ul in the tabHeader div*/
+#tabHeader ul
+{
+    list-style: none;
+    padding:0;
+    margin:0;
+    background-color: #FFFFEE;
+}
+
+/*make the tabHeader horizontal*/
+#tabHeader li
+{
+    float: left;
+    border: solid;
+    border-width: 1px 1px 1px 1px;
+    margin 0 0.5em 0 0;
+    background-color: #FFFFEE;
+    position: relative;
+    top: 0px;
+}
+
+#tabHeader li a
+{
+    padding: 0 1em;
+}
+
+#tabHeader #selected
+{
+    position: relative;
+    top: 1px;
+    background-color: #FFFFCC;
+    border-width: 1px 1px 0px 1px;
+}
+
+#tabHeader #filler
+{
+}
+
+#storeDeleteHeader
+{
+    font-style: italic;
+    float:right;
+    padding: 0 1em;
+    margin:0;
+}
+
+#content 
+{
+    border: 1px;
+    clear: both;
+    background-color: #FFFFCC;
+    border: solid;
+    border-width: 0px 1px 0 1px;
+}
+
+#mainpage
+{
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#content-table
+{
+    border-collapse:collapse; 
+    width:100%;
+}
+
+#content-table td, #content-table th
+{
+    border:1px solid gray; 
+    padding:3px;
+}
+
+.datefield
+/*enough space XXXX-XX-XX*/
+{
+    width: 6em;
+}
+
+#numdays
+{
+    width: 2em;
+}
+
+#balance
+{
+    width: 6em;
+}
+
+#outlook_params
+{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.disabledOutlookOccurence
+{
+   font-style:italic;
+   text-decoration:line-through
+}
