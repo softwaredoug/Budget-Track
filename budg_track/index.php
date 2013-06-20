@@ -20,12 +20,10 @@ include_once('classes/DaysRepeatedAfterFirstOccurenceSchedule.php');
 include_once('classes/MonthlySchedule.php');
 
 include_once('page/IllegalPageRequestException.php');
+include_once('dbconfig.php');
 
-$obj['db'] = new MySqlConnection(array('host' => 'localhost',
-                                       'user' => 'webuser',
-                                       'pass' => 'kharabean',
-                                       'db' => 'budget_track',
-                                       ) );
+
+$obj['db'] = createDbConnection();
 $obj['db']->open();
 
 
